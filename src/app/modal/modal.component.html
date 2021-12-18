@@ -2,15 +2,20 @@
 <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title" style="width: 100%;" id="exampleModalLabel"> <div style="color:#108ad1; font-weight: bold"><ng-container  *ngIf="day.date != 25">Oggi è il {{day.date}} Dicembre! <i class="bi bi-alarm"></i></ng-container> <ng-container *ngIf="day.date == 25">Oggi è NATALOOO! <i class="bi bi-gift"></i></ng-container>
+            <h5 class="modal-title" style="width: 100%;" id="exampleModalLabel"> 
+                <div style="color:#108ad1; font-weight: bold">
+                    <ng-container  *ngIf="day.date != 25 && currentDate>= day.date">Oggi è il {{day.date}} Dicembre! <i class="bi bi-alarm"></i></ng-container> 
+                    <ng-container *ngIf="day.date == 25 && currentDate >= day.date">Oggi è NATALOOO! <i class="bi bi-gift"></i></ng-container>
+                    <ng-container *ngIf="day.date > currentDate">Per questo ci vuol pazienza!</ng-container>
                 <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button></div> 
-                <br>{{day.note}} <i *ngIf="day.icon" class="{{day.icon}}"></i></h5>
+                <br>
+                <div *ngIf="currentDate>= day.date">
+                    {{day.note}} <i *ngIf="day.icon" class="{{day.icon}}"></i>
+                </div>
+            </h5>
         </div>
-        <div class="modal-body">
-            <video *ngIf="day.date == 30" width="100%" height="240" controls>
-                <source src="../../assets/IMG_81930093.MOV" >
-            </video>
-            <img *ngIf="day.img" src="{{day.img}}" alt="">
+        <div class="modal-body" *ngIf="currentDate>= day.date">
+            <div *ngIf="day.img" class="image"  [ngStyle]="{background: 'url(' + day.img +')'}"></div>
             <iframe *ngIf="day.date == 18" width="100%" height="315" src="https://www.youtube.com/embed/0OJxLHNn-2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <iframe  *ngIf="day.date == 19" width="100%" height="315" src="https://www.youtube.com/embed/cg40FWvQP3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <iframe *ngIf="day.date == 22" width="100%" height="315" src="https://www.youtube.com/embed/mRgCWepNzuI?start=26" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

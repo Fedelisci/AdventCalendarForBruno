@@ -8,7 +8,7 @@ import { Day } from '../day';
 })
 export class CalendarComponent implements OnInit {
   public days: Day[] = [
-    {date: 17, note: 'Visto che oggi vado via, ti do motivo di odiarmi un pochino', icon: 'bi-heart-fill', img: '../../assets/chat.JPG' }, 
+    {date: 17, note: 'Questo era un motivo per farmi odiare un pochino ieri....', icon: 'bi-heart-fill', img: '../../assets/chat.JPG' }, 
     {date: 18, note: 'Questo probabilmente lo conosci, però mi ha fatto ridere!', icon: 'bi bi-emoji-laughing', img: ''}, 
     {date: 19, note: 'Molte cose Bruno che esistono: Giordano Bruno (filosofo), Bruno è un colore, Bruno è un comune italiano ed esistono anche un film Bruno (2009) e Radio Bruno. AH, anche lui è un Bruno', icon: 'bi bi-emoji-dizzy', img: '' }, 
     {date: 20, note: 'Puoi aprire il pacchetto numero uno, buon Lunedì ', icon: 'bi bi-stars', img: '../../assets/scimm.JPG' }, 
@@ -21,7 +21,7 @@ export class CalendarComponent implements OnInit {
     {date: 27, note: 'E  questo è un altro dei video che guardavo in loop', icon: 'bi bi-emoji-laughing', img: '' }, 
     {date: 28, note: 'Ovviamente il minutaggio non è casuale', icon: 'bi bi-emoji-wink', img: '' }, 
     {date: 29, note: 'Una dose di gatti galattici prima che arrivo!', icon: 'bi-emoji-smile', img: '' }, 
-    {date: 30, note: 'Io che con pazienza dico che sto tornando a romperti i coglioni, in basso le prove...', icon: '', img: '../../assets/prove.JPG' }
+    {date: 30, note: 'Io che con pazienza provavo a dire in un video che sto tornando a romperti i coglioni, in basso le prove...', icon: '', img: '../../assets/prove.JPG' }
   ];
 
   public currentDate: number = 0;
