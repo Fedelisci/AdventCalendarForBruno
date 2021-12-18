@@ -15,7 +15,14 @@
             </h5>
         </div>
         <div class="modal-body" *ngIf="currentDate>= day.date">
-            <div *ngIf="day.img" class="image"  [ngStyle]="{background: 'url(' + day.img +')'}"></div>
+            <div *ngIf="day.img && day.date == 17" class="image{{day.date}}"></div>
+            <div *ngIf="day.img && day.date == 20" class="image{{day.date}}"></div>
+            <div *ngIf="day.img && day.date == 21" class="image{{day.date}}"></div>
+            <div *ngIf="day.img && day.date == 23" class="image{{day.date}}"></div>
+            <div *ngIf="day.img && day.date == 24" class="image{{day.date}}"></div>
+            <div *ngIf="day.img && day.date == 26" class="image{{day.date}}"></div>
+            <div *ngIf="day.img && day.date == 30" class="image{{day.date}}"></div>
+            
             <iframe *ngIf="day.date == 18" width="100%" height="315" src="https://www.youtube.com/embed/0OJxLHNn-2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <iframe  *ngIf="day.date == 19" width="100%" height="315" src="https://www.youtube.com/embed/cg40FWvQP3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <iframe *ngIf="day.date == 22" width="100%" height="315" src="https://www.youtube.com/embed/mRgCWepNzuI?start=26" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
